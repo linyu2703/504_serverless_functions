@@ -39,9 +39,11 @@ GCP: https://blood-pressure-370972544757.us-central1.run.app
 
 Azure: https://yulin-serverless-hqehfjhdbdevghf9.eastus-01.azurewebsites.net/api/http_trigger1?code=HX9t08TylJXkwNVO4-fSLPlGIax01RS0mz7blEbCqVPwAzFu7Moddw==
 
+## Cholesterol Source Link:
+https://my.clevelandclinic.org/health/articles/11920-cholesterol-numbers-what-do-they-mean
 
 ## Example Requests
-### Testing Optimal Total Cholesterol level (GCP)
+### Testing Optimal Total Cholesterol level (GCP) 
 ```python
 import requests
 
