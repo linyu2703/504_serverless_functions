@@ -6,7 +6,7 @@ Recording:
 ## Cloud environments
 Cloud environment used and their regions: 
 - Google Cloud Platform: US-central-1
-- Azure: East US 2
+- Azure: East US
 
 ## Steps to deployment
 GCP: 
