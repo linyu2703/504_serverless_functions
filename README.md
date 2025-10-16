@@ -26,18 +26,18 @@ Azure:
 
 ## Functionality showcase
 GCP:
-![GCP function]()
-![GCP function]()
+![GCP function](/GCP/gcp_request.png)
+![GCP function](/GCP/gcp_test.png)
 
 Azure:
-![azure functionality]()
-![azure functionality]()
+![azure functionality](/AZURE/azure_request.png)
+![azure functionality](/AZURE/azure_test.png)
 
 
 ## Public Endpoint URLs
-GCP: 
+GCP: https://blood-pressure-370972544757.us-central1.run.app
 
-Azure: 
+Azure: https://yulin-serverless-hqehfjhdbdevghf9.eastus-01.azurewebsites.net/api/http_trigger1?code=HX9t08TylJXkwNVO4-fSLPlGIax01RS0mz7blEbCqVPwAzFu7Moddw==
 
 
 ## Example Requests
@@ -45,7 +45,7 @@ Azure:
 ```python
 import requests
 
-url = ''
+url = 'https://blood-pressure-370972544757.us-central1.run.app'
 
 body = {
     "cholesterol": 180
@@ -58,17 +58,17 @@ print(response.text)
 Output:
 
 ```json
-{"fasting glucose": 180.0, "status": "optimal", "category": "Optimal (<200 mg/dL)"}
+{"cholesterol": 180.0, "status": "optimal", "category": "Optimal (<200 mg/dL)"}
 ```
 
 ### Testing High Total Cholesterol level (Azure)
 ```python
 import requests
 
-url = ''
+url = 'https://yulin-serverless-hqehfjhdbdevghf9.eastus-01.azurewebsites.net/api/http_trigger1?code=HX9t08TylJXkwNVO4-fSLPlGIax01RS0mz7blEbCqVPwAzFu7Moddw=='
 
 body = {
-    "fasting glucose": 270
+    "cholesterol": 270
 }
 
 response = requests.post(url, json=body)
@@ -77,17 +77,17 @@ print(response.text)
 ```
 Output:
 ```json
-{"fasting glucose": 270.0, "status": "high", "category": "High (>=240 mg/dL)"}
+{"cholesterol": 270.0, "status": "high", "category": "High (>=240 mg/dL)"}
 ```
 
 ### Testing Borderline High Total Cholesterol level (Azure)
 ```python
 import requests
 
-url = ''
+url = 'https://yulin-serverless-hqehfjhdbdevghf9.eastus-01.azurewebsites.net/api/http_trigger1?code=HX9t08TylJXkwNVO4-fSLPlGIax01RS0mz7blEbCqVPwAzFu7Moddw=='
 
 body = {
-    "fasting glucose": 225
+    "cholesterol": 225
 }
 
 response = requests.post(url, json=body)
@@ -96,7 +96,7 @@ print(response.text)
 ```
 Output:
 ```json
-{"fasting glucose": 225.0, "status": "borderline high", "category": "Borderline High (200-240 mg/dL)"}
+{"cholesterol": 225.0, "status": "borderline high", "category": "Borderline High (200-240 mg/dL)"}
 ```
 
 ## Comparison between GCP and Azure for serverless functions
